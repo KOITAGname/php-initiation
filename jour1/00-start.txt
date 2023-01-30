@@ -1,0 +1,7 @@
+vous devez obligatoirement creer dans un dossier 
+
+
+
+-----------------presentation---------------
+php= PHP Hypertext preprocessor
+langage serveur => langage qui va e
