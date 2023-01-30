@@ -3,6 +3,7 @@
 $prenom = "Victor";
 $nom = "Hugo";
 $ville = "Paris";
+
 $phrase1 = "$prenom $nom a vecu a $ville en 1800.";
 echo $phrase1;
 echo "<br>";
