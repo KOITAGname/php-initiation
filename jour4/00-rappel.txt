@@ -1,0 +1,80 @@
+XAMPP =>
+Apache
+MariaDB 
+PHP
+Perl 
+
+=> paramétrage vie des fichiers textuels 
+
+PHP => php.ini ajouter module xdebug 
+Apache => httpd.conf 
+
+daemon
+https://www.igi-global.com/dictionary/nosql-databases/39031
+
+-----
+
+- traitement sur les tableaux => parcourir un tableau 
+
+$tab = [1,2];
+
+for($i = 0 ; $i <= 1 ; $i++){ }
+for($i = 0 ; $i < count($tab) ; $i++){ }
+foreach($tab as $t){}
+
+-----------------------
+
+- tableau multidimensionnel 
+
+$t = [1,2]; indexé
+$t2 = ["prop"=> 10 , "prop2" => 12 ] associatif
+
+$tab = [ 
+    [ "prix" => 10.5 , "enLigne" => false , notes => [ 1, 2 ] ],
+    [ "prix" => 500.9 , "enLigne" => true , notes => [ 10, 5, 4 ] ]
+];
+// tableau multidimensionnel avec indexé qui contient des associatifs 
+// et notes est indexé
+
+-----------------------
+
+- php est livré avec des fonctions natives 
+
+traitement sur les variables => 
+string => echo / var_dump / format_number() / htmlspecialchars() htmlentities() / strlen() / substr_replace() ... str_contains()
+
+php.net => saisir dans l'input de recherche la fonction native 
+
+https://www.php.net/manual/fr/function.htmlspecialchars.php
+
+définition => mode d'emploi
+
+ htmlspecialchars(
+    string $string,
+    int $flags = ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401,
+    ?string $encoding = null,
+    bool $double_encode = true
+): string
+
+retourne un string 
+4 paramètres et seul le 1er doit être écrit 
+les 3 autres ont une valeur par défaut 
+
+ var_dump(mixed $value, mixed ...$values): void
+
+ 1 paramètre $value qui peut prendre n'importe quel type => mixed === string / boolean / array / object / int / float 
+ 2 mixed ...$values cette fonction prend un nombre indéterminé de paramètres de n'importe quel type 
+
+void => vide la fonction en retourne RIEN (la fonction ne contient pas de return)
+
+ $a = var_dump("tutu");
+
+-----------------
+
+- require => découper un projet en plusieurs PHP 
+
+en informatique => diviser pour mieux régner sur votre code 
+
+variable => fichier de datas => Base de données
+fonction => fichiers de fonctions => librairie 
+fichier exécution => variables + fonctions => exécution (envoyer email / afficher / stocker / répondre à l'écran / message d'erreur ... )
