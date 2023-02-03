@@ -49,17 +49,14 @@ if( !empty($_GET) &&       // est ce que j'ai une partie variable dans l'url
                 afficher une seule ville
                 aucune ville
             -->
-            <?php if(count($villes) > 1) : ?>
-                <h1>Plusieurs villes</h1>
-                <?php foreach($villes as $v) : ?>
-                    <div class="col s3">
-                        <p>nom ville : <?php echo $v["nom"] ?></p>
-                        <p>
-                            nombre d'habitants : 
-                            <?php echo number_format($v["nbHabitant"] , 0 , "," , " " ) ?>
+<?php if(count($villes) > 1) : ?>
+    <h1>Plusieurs villes</h1>
+        <?php foreach($villes as $v) : ?>
+            <div class="col s3">
+            <p>nom ville : <?php echo $v["nom"] ?></p>
+                <p>nombre d'habitants : <?php echo number_format($v["nbHabitant"] , 0 , "," , " " ) ?>
                         </p>
-                        <p>
-                            <a href="http://localhost/php-initiation/jour4/09-exo.php?nom=<?php echo $v["nom"] ?>" class="waves-effect waves-light btn">voir la ville</a>
+<p><a href="http://localhost/php-initiation/jour4/09-exo.php?nom=<?php echo $v["nom"] ?>" class="waves-effect waves-light btn">voir la ville</a>
                         </p>
                     </div>
                 <?php endforeach ?>
