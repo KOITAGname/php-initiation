@@ -1,2 +1,25 @@
 support de cours:
 https://formation.web
+support de cours :
+https://formation.webdevpro.net/php-poo
+login : php
+password : poo
+
+// texte => string 
+// chiffre => int / float 
+// logique = boolean 
+
+// tableau 
+// indexé / associatifs 
+
+// ET objet => l'objet de cette semaine 
+
+
+dans un objet on peut stocker PLUSIEURS valeurs 
+MAIS en + dans un objet on peut stocker des fonctions 
+
+rappel en js quand on veut créer un objet 
+const a = { } ;
+
+en PHP il faut d'aborder class ET à partir de cette class créer un objet 
+instancier un objet depuis une class 

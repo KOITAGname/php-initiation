@@ -1,0 +1,18 @@
+Lancer XAMPP 
+Lancer Apache 
+
+Lancer le projet de vendredi après midi 
+
+http://localhost/php-initiation/blog/index.php
+
+=> finir ce matin 
+
+=> PHP POO 
+
+=> structure / architecture du projet (les fichiers et les dossiers)
+
+index.php => point d'entrée de notre application web 
+data.php => base de données de notre application web 
+vue/ avec plusieurs fichiers  relation entre urls => fichiers (Router)
+
+=> wireframing (schéma en fil de fer) => zoning 
