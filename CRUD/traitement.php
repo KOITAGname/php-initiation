@@ -46,6 +46,7 @@ if(count($erreurs) === 0){
     ];
     // INSERER les informations en base de données
     $connexion = new PDO('sqlite:./base.db');
+    //creation du tableau 
     $connexion->query("
         CREATE TABLE IF NOT EXISTS articles (
             id INTEGER PRIMARY KEY AUTOINCREMENT ,
