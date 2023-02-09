@@ -78,7 +78,7 @@ session_start();
                    <?php echo $_SESSION["message"]["info"]  ?>
                 </p>
             <?php elseif($_SESSION["message"]["alert"] === "danger") : ?> 
-                <p class="alert alert-danger" 
+                <p class="bg-danger" 
                    style="padding:5px 10px">
                    <?php foreach($_SESSION["message"]["info"] as $i) : ?>
                      <?php echo $i  ?><br>
@@ -90,19 +90,28 @@ session_start();
 </div>
 <script>
         // préremplir le champ date de création à aujourd'hui 
-        const dt = new Date(); // récupérer la date du jour et stocker dans la variable dt 
-        const annee = dt.getFullYear(); // extraire l'année de dt
-        const mois = ("0" + (dt.getMonth() + 1) ).slice(-2); // extraire le mois de dt + 1 
-            // dt.getMonth() => decembre => 11
-            // dt.getMonth() + 1 => janvier => 12
-            // "0" + dt.getMonth() + 1 => janvier => 012
-            // ("0" + dt.getMonth() + 1 ).slice(-2) => 12
+        // const dt = new Date(); // récupérer la date du jour et stocker dans la variable dt 
+        // const annee = dt.getFullYear(); // extraire l'année de dt
+        // const mois = ("0" + (dt.getMonth() + 1) ).slice(-2); // extraire le mois de dt + 1 
+        //     // dt.getMonth() => decembre => 11
+        //     // dt.getMonth() + 1 => janvier => 12
+        //     // "0" + dt.getMonth() + 1 => janvier => 012
+        //     // ("0" + dt.getMonth() + 1 ).slice(-2) => 12
                                 
-        const jour = ("0" + dt.getDate()).slice(-2); // extraite le jour de dt
+        // const jour = ("0" + dt.getDate()).slice(-2); // extraite le jour de dt
 
-        if(document.querySelector("#date").value === ""){
-            document.querySelector("#date").value = `${annee}-${mois}-${jour}`;
-        }
+        // if(document.querySelector("#date").value === ""){
+        //     document.querySelector("#date").value = `${annee}-${mois}-${jour}`;
+        // }
+//////////////////////////////////////une autre maniere de faire (date du jour)///////////////////////////////////
+       if(document.querySelector("#date").value === ""){
+       document.querySelector("#date").valueAsDate = new Date();
+
+            // php date()
+            // js new Date() Date.now()
+            // SQL NOW()
+         }
+
 
         // lorsque l'on clique sur le bouton show => changer le type du champ password => text
         // lorsque je reclique que le bouton show => changer le type du champ text => password 
