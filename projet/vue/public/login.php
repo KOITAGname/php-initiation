@@ -1,12 +1,12 @@
 <h1 class="text-center">Connexion</h1>
-<form action="lib/traitement-login.php" method="POST" class="row">
+<form action="lib/traitement-login.php" method="POST" class="row my-5">
     <div class="col-3 offset-3">
 
-        <input type="text" name="" id="" placeholder="votre login" class="form-control" name="login">
+        <input type="text" name="login" id="name" placeholder="votre login" class="form-control">
     </div>
 
     <div class="col-3 ">
-        <input type="text" placeholder="votre mot de passe" class="form-control">
+        <input type="text" placeholder="votre mot de passe" class="form-control" name="password">
     </div>
 
     <div class="col-12 d-flex justify-content-center mt-4">
@@ -14,17 +14,4 @@
     </div>
 
 </form>
-
-<?php if(!empty($_SESSION["message"])) : ?>
-    <?php if($_SESSION["message"]["alert"] === "success") : ?> 
-        <p class="alert alert-success" >
-            <?php echo $_SESSION["message"]["info"]  ?>
-        </p>
-    <?php elseif($_SESSION["message"]["alert"] === "danger") : ?> 
-        <p class="alert alert-danger">
-            <?php foreach($_SESSION["message"]["info"] as $i) : ?>
-                <?php echo $i  ?><br>
-            <?php endforeach ?>
-        </p>
-    <?php endif ?>
-<?php endif ?>
+<?php require "lib/message-flash.php" ?>
